@@ -26,34 +26,25 @@ Launch Jupyter Notebook & Import Necessary Libraries<br/><br/>
 
 
 <p align="Left">
-The dataset doesn’t have any null values. Now, let’s have a look at the descriptive statistics of the data:<br/> <br/>
+The dataset doesn’t have any null values:<br/> <br/>
+<img width="946" alt="s3" src="https://user-images.githubusercontent.com/65899924/225304043-873d37be-5360-407d-be97-6dadda5c6200.png">
+ 
 
 
 
 
 <p align="Left">
-Now Creating a new dataframe by storing all the data about the top 10 highest-rated iPhones in India on Flipkart. It will help in understanding what kind of iPhones are liked the most in India: <br/>
-<img width="832" alt="i4" src="https://user-images.githubusercontent.com/65899924/224966924-e941e1e9-be31-4776-becc-dada67d6bac6.png">
+The column containing the date of the record is an object. We may need to use dates in our analysis, so let’s convert this column into a datetime column: <br/>
+<img width="941" alt="s4" src="https://user-images.githubusercontent.com/65899924/225304675-bc4d46f9-34f9-45c1-bcf8-20deb5e809ff.png">
+ 
 
 
 
 <p align="Left">
-<b>According to the above data, below are the top 5 most liked iPhones in India:</b>
+Look at all the columns; you will see information about very active, fairly active, lightly active, and sedentary minutes in the dataset. Let’s combine all these columns as total minutes before moving forward:
 
- -APPLE iPhone 11 Pro Max (Midnight Green, 64 GB)
-
- -APPLE iPhone 11 Pro Max (Space Grey, 64 GB)
-
- -APPLE iPhone 11 Pro Max (Midnight Green, 256 GB)
-
- -APPLE iPhone 11 Pro Max (Gold, 64 GB)
-
- -APPLE iPhone 11 Pro Max (Gold, 256 GB)
-
-<img width="944" alt="i5" src="https://user-images.githubusercontent.com/65899924/224990987-0838db14-3889-4d55-bbf2-89cd4a00b01f.png">
-
-![i5 plot](https://user-images.githubusercontent.com/65899924/224991043-1b91ccd4-ff68-455c-8478-53062bd7388c.png)
-
+<img width="940" alt="s5" src="https://user-images.githubusercontent.com/65899924/225305209-cbc728db-1f89-4d69-88fa-8c50d803e562.png">
+ 
 
 
 
@@ -61,36 +52,72 @@ Now Creating a new dataframe by storing all the data about the top 10 highest-ra
 
 
 <p align="Left">
-According to the above bar graph, APPLE iPhone 8 Plus (Gold, 64 GB) has the most ratings on Flipkart. Now let’s have a look at the number of reviews of the highest-rated iPhones on Flipkart: <br/><br/>
+Now let’s have a look at the descriptive statistics of the dataset: <br/><br/>
+<img width="939" alt="s6" src="https://user-images.githubusercontent.com/65899924/225306198-5b983bf5-59fc-4d2c-8e41-13ffd56bcdb7.png">
+<img width="944" alt="s66" src="https://user-images.githubusercontent.com/65899924/225307235-560ac407-8932-41b9-a0d7-22062939175f.png">
 
-
-<img width="940" alt="i6" src="https://user-images.githubusercontent.com/65899924/224991926-e8b183e7-bcc8-4363-84a8-aa74127e3b98.png">
-
-
-
-<p align="Left">
-APPLE iPhone 8 Plus (Gold, 64 GB) is also leading in the highest number of reviews on Flipkart among the highest-rated iPhones in India. Now let’s have a look at the relationship between the sale price of iPhones and their ratings on Flipkart: <br/><br/>
-
-<img width="948" alt="i7" src="https://user-images.githubusercontent.com/65899924/224992901-9fcbe00c-e21e-46ce-b9b4-f2b340af19b7.png">
+ 
 
 
 <p align="Left">
-There is a negative linear relationship between the sale price of iPhones and the number of ratings. It means iPhones with lower sale prices are sold more in India. Now let’s have a look at the relationship between the discount percentage on iPhones on Flipkart and the number of ratings: <br/><br/>
+<b>Let’s Analyze the Smartwatch Data⌚️</b><br/><br/>
+The dataset has a “Calories” column; it contains the data about the number of calories burned in a day. Let’s have a look at the relationship between calories burned and the total steps walked in a day: <br/><br/>
 
-<img width="932" alt="i8" src="https://user-images.githubusercontent.com/65899924/224993460-b32851b1-28aa-42ea-a0c7-44270ffe9a07.png">
+<img width="943" alt="s7" src="https://user-images.githubusercontent.com/65899924/225307477-38cb5543-5d92-42eb-b67d-a2a73e06342b.png">
+ 
+<p align="Left"> 
+You can see that there is a linear relationship between the total number of steps and the number of calories burned in a day. Now let’s look at the average total number of active minutes in a day:
+ 
 
+<img width="931" alt="s8" src="https://user-images.githubusercontent.com/65899924/225308148-3c5fc014-6f1e-4f41-952d-f8710bbf42f6.png">
+ 
+![s88](https://user-images.githubusercontent.com/65899924/225308199-3e41ac43-9a21-48e4-bdef-8539f700ea21.png)
+ 
+ 
+<h3><b>Observations:</b></h3>
+1)81.3% of Total inactive minutes in a day<br/>
+2)15.8% of Lightly active minutes in a day<br/>
+3)On an average, only 21 minutes (1.74%) were very active and 1.11% (13 minutes) of fairly active minutes in a day<br/><br/>
+ 
+  
 <p align="Left">
-There is a linear relationship between the discount percentage on iPhones on Flipkart and the number of ratings. It means iPhones with high discounts are sold more in India
+ We transformed the data type of the ActivityDate column to the datetime column above. Let’s use it to find the weekdays of the records and add a new column to this dataset as “Day”:
 
-<b>Summary-
+<img width="939" alt="s9" src="https://user-images.githubusercontent.com/65899924/225309357-46f63c1b-e2d6-4301-b25f-7b4bf7d76724.png">
 
-So this is how you can analyze the sales of iPhones in India using the Python programming language. Some of the takeaways from this article about the sales of iPhone in India are:
+ 
+<p align="Left">
+Now let’s have a look at the very active, fairly active, and lightly active minutes on each day of the week:<br/>
 
-1-APPLE iPhone 8 Plus (Gold, 64 GB) was the most appreciated iPhone in India
+<img width="943" alt="s10" src="https://user-images.githubusercontent.com/65899924/225309640-c1288e01-078c-44f7-9799-857b8a4bca68.png">
+ 
+![s1010](https://user-images.githubusercontent.com/65899924/225309706-33f1d228-a725-4735-b132-64ba81eae126.png)
+ 
 
-2-iPhones with lower sale prices are sold more in India
+<p align="Left"> 
+Now let’s have a look at the number of inactive minutes on each day of the week:<br/><br/>
 
-3-iPhones with high discounts are sold more in India</b>
+<img width="940" alt="s11" src="https://user-images.githubusercontent.com/65899924/225309972-07d3871e-99fa-4bd3-bef7-6aa482f5840c.png">
+ 
+ 
+<p align="Left"> 
+<b>So Thursday is the most inactive day according to the lifestyle of all the individuals in the dataset.<br/><br/></b>
+Now let’s have a look at the number of calories burned on each day of the week:
+<img width="938" alt="s12" src="https://user-images.githubusercontent.com/65899924/225310292-c64601bd-167d-4655-8d6e-380fe281547e.png">
+ 
+![s1212](https://user-images.githubusercontent.com/65899924/225310372-7a0755cf-ed61-4a2a-8df8-b5b121bfef0e.png)
+ 
+ 
+ 
+ 
+<br/> 
+ 
+<h2><b>Summary:<br/></h2>
+Tuesday is, therefore, one of the most active days for all individuals in the dataset, as the highest number of calories were burned on Tuesdays.<br/>
+
+So this is how you can analyze smartwatch data using the Python programming language. There is a lot more you can do with this dataset. You can also use it for predicting the number of calories burned in a day. </b>
+ 
+
 
 
 
